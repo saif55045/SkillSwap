@@ -1,0 +1,258 @@
+/* MessageList.css - Styles for the message list component */
+
+.message-list-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.message-list-header {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-list-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.message-count {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.875rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.conversations-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.conversations-list li {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.conversations-list li:last-child {
+  border-bottom: none;
+}
+
+.conversations-list li:hover {
+  background-color: #ebf5ff;
+}
+
+.conversation-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.conversation-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.unread-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.conversation-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.conversation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: #6b7280;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+.message-preview {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 4px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100vw - 200px);
+}
+
+.message-preview.unread {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.sender-prefix {
+  color: #9ca3af;
+  margin-right: 4px;
+}
+
+.chevron-icon {
+  color: #9ca3af;
+  margin-left: 8px;
+}
+
+/* Empty state styles */
+.empty-state {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  padding: 32px;
+  text-align: center;
+}
+
+.empty-icon-container {
+  width: 64px;
+  height: 64px;
+  background-color: #ebf5ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.empty-icon {
+  width: 32px;
+  height: 32px;
+  color: #3b82f6;
+}
+
+.empty-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.empty-description {
+  color: #6b7280;
+  margin: 0 0 16px;
+}
+
+.browse-button {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.browse-button:hover {
+  background-color: #2563eb;
+}
+
+/* Loading state styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(59, 130, 246, 0.1);
+  border-left-color: #3b82f6;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error state styles */
+.error-container {
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+
+.error-message {
+  color: #dc2626;
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+.try-again-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.try-again-button:hover {
+  background-color: #2563eb;
+}

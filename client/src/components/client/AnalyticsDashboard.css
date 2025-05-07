@@ -1,0 +1,253 @@
+/* Analytics Dashboard Styles */
+.analytics-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date-filter input {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.date-filter button {
+  background-color: #4a6bf5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.date-filter button:hover {
+  background-color: #3a57d5;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.analytics-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 100%;
+}
+
+.analytics-card h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.chart-container {
+  height: 300px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 6px;
+  color: white;
+}
+
+.status-item.open {
+  background-color: #4caf50;
+}
+
+.status-item.in-progress {
+  background-color: #2196f3;
+}
+
+.status-item.completed {
+  background-color: #673ab7;
+}
+
+.status-item.cancelled {
+  background-color: #f44336;
+}
+
+.status-number {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.status-label {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.freelancer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.freelancer-table th,
+.freelancer-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.freelancer-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+}
+
+.freelancer-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.rating-stars {
+  color: #ffc107;
+}
+
+.budget-comparison {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.budget-bar {
+  flex-grow: 1;
+  height: 24px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin: 0 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.budget-bar-fill {
+  height: 100%;
+  background-color: #4caf50;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.budget-bar-fill.over {
+  background-color: #f44336;
+}
+
+.budget-amount {
+  width: 80px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.export-section {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.export-title {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.export-button {
+  padding: 10px 18px;
+  background-color: #4a6bf5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.export-button:hover {
+  background-color: #3a57d5;
+}
+
+.export-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #4a6bf5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-message {
+  padding: 16px;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
