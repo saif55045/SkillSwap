@@ -1,6 +1,18 @@
-# SkillSwap
+﻿# SkillSwap
 
 ![SkillSwap Logo](client/public/logo.svg)
+
+
+## ðŸ–¼ï¸ Screenshots
+
+![Screenshot](assets/Screenshot%202026-06-18%20213444.png)
+
+![Screenshot](assets/Screenshot%202026-06-18%20213733.png)
+
+![Screenshot](assets/Screenshot%202026-06-18%20213843.png)
+
+![Screenshot](assets/Screenshot%202026-06-18%20213928.png)
+
 
 ## About SkillSwap
 
@@ -213,5 +225,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ![Screenshot](assets/Screenshot%202026-06-18%20213843.png)
 
 ![Screenshot](assets/Screenshot%202026-06-18%20213928.png)
-
-
